@@ -15,7 +15,7 @@ jobs:
         uses: actions/checkout@v2
 
       # Cache node modules and next folder
-      - name: 📬 Caching
+      - name: Caching
         uses: actions/cache@v2
         with:
           path: |
@@ -27,15 +27,12 @@ jobs:
         uses: actions/setup-node@v2
         with:
           node-version: 16.x
-
-      - name: 🧰 Install dependencies
-        run: npm run install
-
-      - name: 📦 Build project
+      - name: Install dependencies
+      - name: Build
         run: npm run build --if-present
 
       # Deploy to Netlify with a personalized message
-      - name: 🚀 Deploy to Netlify
+      - name: Deploy to Netlify
         id: deploy-netlify
         uses: netlify/actions/cli@master
         env:
