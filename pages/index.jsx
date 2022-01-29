@@ -14,6 +14,7 @@ export default function Home() {
       <main className={styles.main}>
         <h1>Learning Git</h1>
         <p>Learning Hard Reset</p>
+        <p>testing Hard Reset</p>
       </main>
     </div>
   )
